@@ -26,6 +26,8 @@ cropped_img = img[y_top:y_top + height, x_top:x_top + width]
 cropped_img_grayscale = cv2.cvtColor(cropped_img, cv2.COLOR_BGR2GRAY)
 
 # Tracez un histogramme par bande spectrale RGB des valeurs pixels (installer matplolib pour les visualiser) avec numpy ou opencv
+hist_channels = [cv2.calcHist([cropped_img], [i], None, [256], [0, 256]) for i in range(3)]
+
 
 # Analysez les histogrammes pour segmenter le chateau avec un seuil
 
