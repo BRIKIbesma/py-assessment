@@ -3,7 +3,6 @@ import numpy as np
 
 # Charger une image binaire de ce format
 IMG_HEIGHT = 480
-
 IMG_WIDTH = 640
 CHANNEL = 1 # Grayscale
 
@@ -25,7 +24,7 @@ normalized_img = ((thermal_img - min_val) / (max_val - min_val) * 255).astype(np
 # Enregistrez l'image normalisée au format PNG
 cv2.imwrite("normalized_thermal_img.png", normalized_img)
 
-# Afficher l'image normalisée (facultatif)
+# Afficher l'image normalisée 
 cv2.imshow("Normalized Image", normalized_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
