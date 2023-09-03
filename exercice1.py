@@ -25,4 +25,7 @@ normalized_img = ((thermal_img - min_val) / (max_val - min_val) * 255).astype(np
 # Enregistrez l'image normalisée au format PNG
 cv2.imwrite("normalized_thermal_img.png", normalized_img)
 
-# Enregistrer l'image normalisée au format png
+# Afficher l'image normalisée (facultatif)
+cv2.imshow("Normalized Image", normalized_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
