@@ -20,7 +20,7 @@ y_top = 450
 height = 170
 width = 450
 
-cropped_img =
+cropped_img = img[y_top:y_top + height, x_top:x_top + width]
 
 # Tracez un histogramme par bande spectrale RGB des valeurs pixels (installer matplolib pour les visualiser) avec numpy ou opencv
 
