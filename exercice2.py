@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
 img_path = "resources/chateau.png"
 
@@ -30,6 +31,14 @@ hist_channels = [cv2.calcHist([cropped_img], [i], None, [256], [0, 256]) for i i
 
 
 # Analysez les histogrammes pour segmenter le chateau avec un seuil
+plt.figure()
+for i, color in enumerate(['Blue', 'Green', 'Red']):
+    plt.plot(hist_channels[i], color=color, label=f'Canal {color}')
+plt.legend()
+plt.title('Histogrammes des canaux RGB')
+
+# Configurez le seuil pour la segmentation (vous pouvez ajuster ce seuil)
+seuil = 100
 
 # Enregistrez vos resultats
 
