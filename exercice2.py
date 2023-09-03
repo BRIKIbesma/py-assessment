@@ -4,7 +4,7 @@ import numpy as np
 img_path = "resources/chateau.png"
 
 # Chargez l'image
-img =
+img = cv2.imread(img_path)
 
 # Affichez la taille de l'image
 print()
