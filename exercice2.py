@@ -40,5 +40,8 @@ plt.title('Histogrammes des canaux RGB')
 # Configurez le seuil pour la segmentation (vous pouvez ajuster ce seuil)
 seuil = 100
 
+# Appliquez le seuillage à l'image en niveaux de gris pour la segmenter
+segmented_img = cv2.threshold(cropped_img_grayscale, seuil, 255, cv2.THRESH_BINARY)[1]
+
 # Enregistrez vos resultats
 
