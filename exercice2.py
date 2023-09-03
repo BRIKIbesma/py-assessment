@@ -6,8 +6,13 @@ img_path = "resources/chateau.png"
 # Chargez l'image
 img = cv2.imread(img_path)
 
+# Vérifiez si l'image a été chargée correctement
+if img is None:
+    raise Exception("Impossible de charger l'image. Assurez-vous que le chemin du fichier est correct.")
+
 # Affichez la taille de l'image
-print()
+height, width, _ = img.shape
+print(f"Taille de l'image : {width}x{height}")
 
 # Cropez l'image autour du chateau au dimension ci-dessous
 x_top = 950
