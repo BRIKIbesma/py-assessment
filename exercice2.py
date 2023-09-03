@@ -44,4 +44,4 @@ seuil = 100
 segmented_img = cv2.threshold(cropped_img_grayscale, seuil, 255, cv2.THRESH_BINARY)[1]
 
 # Enregistrez vos resultats
-
+cv2.imwrite("chateau_segmente.png", segmented_img)
