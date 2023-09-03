@@ -45,3 +45,10 @@ segmented_img = cv2.threshold(cropped_img_grayscale, seuil, 255, cv2.THRESH_BINA
 
 # Enregistrez vos resultats
 cv2.imwrite("chateau_segmente.png", segmented_img)
+
+# Affichez l'image segmentée avec les histogrammes
+cv2.imshow('Image Segmentée', segmented_img)
+
+# Attendre une touche et fermer la fenêtre lorsque vous appuyez sur une touche
+cv2.waitKey(0)
+cv2.destroyAllWindows()
