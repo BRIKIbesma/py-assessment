@@ -22,7 +22,7 @@ max_val = np.max(thermal_img)
 normalized_img = ((thermal_img - min_val) / (max_val - min_val) * 255).astype(np.uint8) 
 
 
-# Faites une normalisation MIN/MAX sur 8 bits de l'image (utiliser opencv)
-normalized_img = 
+# Enregistrez l'image normalisée au format PNG
+cv2.imwrite("normalized_thermal_img.png", normalized_img)
 
 # Enregistrer l'image normalisée au format png
